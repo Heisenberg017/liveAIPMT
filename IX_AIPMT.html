@@ -13,22 +13,13 @@
     <script type="text/javascript" src="fancybox/jquery.min.js"></script>
     <script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
     <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-    <link rel="stylesheet" type="text/css" href="jquery.fancybox-1.3.4.css"/>
+    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css"/>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
-        <
-            link
-            rel = "stylesheet"
-            href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-            integrity = "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-            crossorigin = "anonymous" >
             i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
@@ -82,10 +73,19 @@
                 'hideOnOverlayClick': false,
                 'hideOnContentClick': false,
             });
+            $("a.comparison").fancybox({
+                'type': 'iframe',
+                'width': 800,
+                'height': 750,
+                'href': this.href,
+                'showCloseButton': true,
+                'hideOnOverlayClick': false,
+                'hideOnContentClick': false,
+            });
         });
     </script>
     <link href="bootstrap.css" rel="stylesheet">
-    <link href="font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="theme.css" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"/>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
@@ -209,337 +209,502 @@
     js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
 <div class="wrapper">
-    <a href="popup.php" id="help_popup" class="contact_popup"></a>
     <div class="main">
         <section class="page1" style="background-color:#FFFFFF;">
             <div class="page_container">
                 <!-- header start-->
                 <div class="header">
                     <div class="container">
-                        <!--logo-->
                         <div class="logo" style="float:left; padding-left:10px;">
                             <a href="index.php"><img src="Images/neetLogo.png" alt="Live JEE Logo" width="170px;"
                                                      title="Live JEE Logo"/></a>
                         </div>
                         <div style="float:right; padding-right:10px;">
                             <nav id="main_menu" style="color:#FFFFFF;">
-                                <table class="table">
+                                <table class="table table-bordered table-striped">
                                     <thead>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td><input type="text" id="username" name="username" placeholder="Username"
-                                                   style="height:10px; width:150px;border: 2px solid #d8d3cb; color: #888;height: 20px;
-                                                                                             padding: 4px 6px;
-                                                                                             margin-bottom: 0px;
-                                                                                             font-size: 14px;
-                                                                                              line-height: 20px;
-                                                                                              color: #555555;
-                                                                                              vertical-align: middle;"/>
-                                        </td>
+                                                   style="height:10px; width:150px;"/></td>
                                         <td><input type="text" id="password" name="password" placeholder="Password"
-                                                   style="height:10px; width:150px; border: 2px solid #d8d3cb; color: #888;height: 20px;
-  padding: 4px 6px;
-  margin-bottom: 0px;
-  font-size: 14px;
-  line-height: 20px;
-  color: #555555;
-  vertical-align: middle;"/></td>
+                                                   style="height:10px; width:150px;"/></td>
                                         <td>
                                             <button id="login_submit" name="login_submit"
                                                     class="btn btn-small btn-primary btn-rounded"><b>Login</b></button>
                                         </td>
                                     </tr>
-
+                                    <tr style="display:none" id="invalid_row">
+                                        <td colspan="2" style="color:#990000" id="invalid" name="invalid"></td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </nav>
                         </div>
                     </div>
+                </div>   <!--//header-->
+                <!--page-->
+                <!--banner-->
+                <!--page-->
+                <!-- REVOLUTION SLIDER -->
+                <div id="banner" align="center">
+                    <!-- <img src="img/slider4.png" alt="" width="959px" /> -->
                 </div>
-                <section class="page4" style="background-color:#FFFFFF;">
-                    <div id="banner">
-                        <div class="container intro_wrapper">
-                            <div class="inner_content">
-                                <table style="width:959px;" align="center">
-                                    <tbody>
-                                    <tr>
-                                        <td style="font-size:18px;">
-                                            <h1 class="title"
-                                                style="color:#666666;  text-align:left; text-justify:inter-word;margin: 0;font-size: 30px">
-                                                AIPMT </h1>
-                                            <h1 class="title"
-                                                style="color:#666666;  text-align:left; text-justify:inter-word;margin: 0;font-size: 30px">
-                                                CLASS IX </h1>
-                                            <p style="padding-left:10px; text-align:justify;color: red;">The Class IX is
-                                                Divided into 2 Phase -
-                                            </p>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Phase I</p>
-                                            <p style="padding-left:10px; text-align:justify;">Course &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Completion
-                                                of Syllabus Common to NCERT IX Book at the AIPMT Level. </p>
-                                            <p style="padding-left:10px; text-align:justify;">Feedback Test 1
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After
-                                                5 Months a Test is conducted to guide the students about their
-                                                Orientation. </p>
-                                            <p style="padding-left:10px; text-align:justify">There are three outcomes of
-                                                the Test</p>
-                                            <ul>
-                                                <li><i class="fas fa-angle-right"></i> Continue with AIPMT Preparation.</li>
-                                                <li><i class="fas fa-angle-right"></i> Recommendation for Exclusive School Orientation.</li>
-                                                <li><i class="fas fa-angle-right"></i> Forced Quit based on lack of attendance and very poor performance.
-                                                </li>
-                                            </ul><br>
+                <!-- // END REVOLUTION SLIDER  -->
+                <div class="container wrapper">
+                    <table style="min-width:959px; max-width:100%;" align="center">
+                        <!-- <tr><td>
+                            <h1 class="title" style="color:#666666; padding-top:10px; padding-bottom:10px; ">Live & Interactive Coaching for IIT-JEE by Experts <br /> from Kota </h1>
+                        </td></tr> -->
+                    </table>
+                </div>
 
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Phase II</p>
-                                            <p style="padding-left:10px; text-align:justify;">Course &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Completion
-                                                of Syllabus Common to NCERT IX Book at the AIPMT Level.
-                                                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group
-                                                2 AIPMT Completion of Syllabus Common to NCERT IX Book at the AIPMT
-                                                Level.</p>
-                                            <p style="padding-left:10px; text-align:justify;">Feedback Test 2
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; At
-                                                the End of Class IX syllabus Group 2 students are once again required to
-                                                take Feedback Test &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.
-                                                There 2 outcomes for Class IX.
-                                            </p>
+                <!-- <div id="footer">
+                    <div align="center"><div class="halfCircle"><h4 ><b><br/>BOARD THE TRAIN</b><br/> ENTER</h4></div></div>
+                </div> -->    </div>
+        </section>
+
+        <section class="page4" style="background-color:#FFFFFF;">
+            <div class="container wrapper">
+                <div class="inner_content">
+                    <div class="row">
+                        <table style="min-width:959px; max-width:100%" align="center">
+                            <tr>
+                                <td style="min-width:450px; max-width:50%" colspan="4">
+                                    <div class="span12">
+                                        <h1 class="title"
+                                            style="color:#000000; text-align:justify; text-justify:inter-word;"> A
+                                            systematic Approach towards the path of Success.
+
+                                            <div class="fb-like"
+                                                 style="width:100px;  overflow:hidden; padding-left:20px;  float:right; margin-top:5px;"
+                                                 data-href="https://www.facebook.com/Domain-Edutech-Pvt-Ltd-1755525578009627/"
+                                                 data-layout="standard" data-action="like" data-show-faces="false"
+                                                 data-share="true"></div>
+                                        </h1>
+                                        <img src="Images/IX.png" alt="Live JEE preparation flow"
+                                             width="959" height="207" align="center" border="0" usemap="#Map"
+                                             alt="Live JEE Study Plan" title="Live JEE Study Plan"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" style="min-width:450px; max-width:50%" colspan="4">
+                                    <div class="pad25"></div>
+                    </div>
+                    </td>
+                    </tr>
+                    </table>
+
+                </div>
+            </div>
+    </div>
+</div>
+
+<section class="page4" style="background-color:#FFFFFF;">
+    <div class="container wrapper">
+        <div class="inner_content">
+            <div class="row">
+                <table style="width:959px; font-size:18px; " align="center" cellpadding="5">
+                    <tr>
+                        <td colspan="2">
+                            The Class IX is divided into 2 phase
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label class="btn btn-success"> Phase I</label></td>
+                    </tr>
+                    <tr>
+                        <td width="150" style="vertical-align:top;"><label class="btn btn-info btn-block">
+                            Course </label></td>
+                        <td>Completion of Syllabus Common to NCERT IX Book at the AIPMT Level.</td>
+                    </tr>
+                    <tr>
+                        <td width="150" style="vertical-align:top;"><label class="btn btn-info btn-block"> Feedback Test
+                            1</label></td>
+                        <td>After 5 Months a Test is conducted to guide the students about their Orientation.
+                            <ol>
+                                <li> Continue with AIPMT Preparation</li>
+                                <li> Recommendation for Exclusive School Orientation</li>
+                                <li> Forced Quit based on lack of attendance and very poor performance</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label class="btn btn-success "> Phase II</label></td>
+                    </tr>
+                    <tr>
+                        <td width="150" style="vertical-align:top;"><label class="btn btn-info btn-block">
+                            Course </label></td>
+                        <td>Group 1 NCERT Completion of Syllabus of NCERT IX Book at the School Exam Level.
+                            <br/>
+                            Group 2 AIPMT Completion of Syllabus Common to NCERT IX Book  at the AIPMT Level.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150" style="vertical-align:top;"><label class="btn btn-info btn-block"> Feedback Test
+                            2</label></td>
+                        <td>At the end of class IX the syllabus Group 2 once again required to take Feedback Test 2.
+                            There 2 outcomes for class IX
+                            <ol>
+                                <li>AIPMT Preparation</li>
+                                <li> Exclusive board exam preparation</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="page4" style="background-color:#FFFFFF;">
+    <div class="container wrapper">
+        <div class="inner_content">
+            <div class="row">
+                <table style="width:959px; font-size:18px; " align="center" cellpadding="5">
+
+
+                    <tr>
+                        <td colspan="2">
+
+                            <h1 class="title" style="color:#333;  text-align:justify; text-justify:inter-word;"> The
+                                Class IX Teaching Methodology</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="350px"><label class="btn btn-info btn-block" onclick="change_div('jee')" id="jee_td">
+                            Phase I AIPMT Oriented <i class="fa fa-chevron-down" aria-hidden="true"></i> </label></td>
+                        <td width="380px" style="padding-left:30px"><label class="btn btn-info btn-block"
+                                                                           style="width:350px" id="school_td"
+                                                                           onclick="change_div('school')">Phase II
+                            School Exam Oriented <i class="fa fa-chevron-down" aria-hidden="true"></i> </label></td>
+                    </tr>
+
+                    <tr id="jee">
+                        <td colspan="2"><br/>
+                            <div id="mySemesterDropDownTwo">
+                                <table width="959px" cellpadding="5px">
+                                    <tr>
+                                        <td width="150px" style="vertical-align:top;">
+                                            <label class="btn btn-info btn-block"> Course Coverage </label>
+                                        </td>
+                                        <td style="padding-left:30px">  AIPMT syllabus common to Class IX NCERT Book for AIPMT.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="150px" style="vertical-align:top;">
+                                            <label class="btn btn-info btn-block"> Course Components </label>
+                                        </td>
+                                        <td style="padding-left:30px"> The Lectures ensure that the student is able to develop to the level of AIPMT
+                                            Sequentially
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="150px" style="vertical-align:top;">
+                                            <label class="btn btn-info btn-block">Daily Assignments</label>
+                                        </td>
+                                        <td style="padding-left:30px;"> <span style="font-size: 20px;font-weight: 900">Lecture Supplements:</span> The “In Class
+                                            Examples” and “In Class To Dos” are Given as Lecture
+                                            Supplements.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td style="padding-left:30px"><span style="font-size: 20px;font-weight: 900">Home Assignments:</span> Along with the
+                                            Lecture Supplements a set of curated problems
+                                            will be given to the student as the home assignment with each lecture.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="150px" style="vertical-align:top;">
+                                            <label class="btn btn-info btn-block">Course Material</label>
+                                        </td>
+                                        <td style="padding-left:30px"> Theory
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td style="padding-left:30px">NCERT LEVEL- The rest part of
+                                            theory covers <br>
+                                            AIPMT Booster- Additional theory required for comprehensive coverage for various Pre Medical Entrances.<br>
+                                            Problem Sets
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td style="padding-left:30px">
                                             <ul>
-                                                <li><i class="fas fa-angle-right"></i> AIPMT Preparation.</li>
-                                                <li><i class="fas fa-angle-right"></i> Exclusive Board Exam Orientation.</li>
+                                                <li><i class="fas fa-caret-right"></i> Exercise I — Targeting Board Exam</li>
+                                                <li><i class="fas fa-caret-right"></i> Flashback I —Previous Year’s Board Exam Problem Sets</li>
+                                                <li><i class="fas fa-caret-right"></i> Exercise II — AIPMT Oriented</li>
+                                                <li><i class="fas fa-caret-right"></i> Flashback II — Previous Year’s AIPMT Problem Sets</li>
+                                                <li><i class="fas fa-caret-right"></i> Exercise III — Medical Entrance Examinations besides AIPMT</li>
+                                                <li><i class="fas fa-caret-right"></i> Flashback III — Previous Year’s Question of other PreMedical Tests.</li>
                                             </ul>
                                         </td>
                                     </tr>
-                                    </tbody>
-                                </table>
-                                <table style="width:959px;" align="center">
-                                    <tbody>
                                     <tr>
-                                        <td style="font-size:18px;">
-                                            <h1 class="title"
-                                                style="color:#666666;  text-align:left; text-justify:inter-word;">
-                                                CLASS IX TEACHING METHODOLOGY</h1>
-                                            <p style="padding-left:10px; text-align:justify;color: red;">Phase I Jee
-                                                Oriented</p>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Course
-                                                Coverage </p>
-                                            <p style="padding-left:10px; text-align:justify"> AIPMT syllabus common to Class IX NCERT Book for AIPMT.</p>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Course
-                                                Components
-                                                Lectures</p>
-                                            <p style="padding-left:10px; text-align:justify;">Daily
-                                                Assignments </p>
-                                            <p style="padding-left:10px; text-align:justify">Lecture Supplements: The
-                                                “In Class
-                                                Examples” and “In Class To Dos” are Given as Lecture
-                                                Supplements.</p>
-                                            <p style="padding-left:10px; text-align:justify">Home Assignments: Along
-                                                with the
-                                                Lecture Supplements a set of curated problems
-                                                will be given to the student as the home assignment with each
-                                                lecture.</p>
-
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Course
-                                                Material</p>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Theory</p>
-                                            <p style="padding-left:10px; text-align:justify">NCERT Level- The rest part
-                                                of
-                                                theory covers basics of the topics as covered in
-                                                NCERT Textbook.<br>
-                                                AIPMT Booster-  Additional theory required for comprehensive coverage for various
-                                                Pre Medical Entrances.
-                                                <br>
-                                                Problem Sets
-                                            </p>
+                                        <td>&nbsp;</td>
+                                        <td style="padding-left:30px">Problem Plugins<br>
                                             <ul>
-                                                <li><i class="fas fa-angle-right"></i> Exercise I —Targeting Board Exam</li>
-                                                <li><i class="fas fa-angle-right"></i> Flashback I — Previous Year’s Board Exam Problem Sets</li>
-                                                <li><i class="fas fa-angle-right"></i> Exercise II — AIPMT Oriented</li>
-                                                <li><i class="fas fa-angle-right"></i> Flashback II — Previous Year’s AIPMT Problem Sets</li>
-                                                <li><i class="fas fa-angle-right"></i> Exercise III — Medical Entrance Examinations besides AIPMT</li>
-                                                <li><i class="fas fa-angle-right"></i> Flashback III —  Previous Year’s Question of other PreMedical Tests.</li>
+                                            <li><i class="fas fa-caret-right"></i> Besides the Tutorial Sheets & Daily Assignments the students are given problem sets
+                                            as per their needs.</li>
                                             </ul>
-                                            <p style="padding-left:10px; text-align:justify;">Problem Plugins</p>
-                                            <p style="padding-left:10px; text-align:justify;">Besides the Tutorial Sheets & Daily Assignments the students are given problem sets
-                                                as per their needs.
-                                            </p>
-                                            <p style="padding-left:10px; text-align:justify;"><span style="color: #58A9A9;">Tests</span><br>Tests
-                                                are conducted;
-                                                periodically on</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="150px" style="vertical-align:top;">
+                                            <label class="btn btn-info btn-block">Tests </label>
+                                        </td>
+                                        <td style="padding-left:30px"> Tests are conducted
+                                            periodically on <br/>
                                             <ul>
-                                                <li><i class="fas fa-angle-right"></i> Individual Topics</li>
-                                                <li><i class="fas fa-angle-right"></i> Group of Topics</li>
-                                                <li><i class="fas fa-angle-right"></i> Relative Ranking amongst students</li>
+                                                <li><i class="fas fa-caret-right"></i> Individual Topics</li>
+                                                <li><i class="fas fa-caret-right"></i> Group of Topics</li>
+                                                <li><i class="fas fa-caret-right"></i> Relative Ranking amongst students</li>
                                             </ul>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">The Test help
+                                            <p style="padding-left:10px; text-align:justify;color: #000000;margin-bottom: 0">
+                                                The Test help
                                                 to gauge</p>
                                             <ul>
-                                                <li>Topic Understanding</li>
-                                                <li>Ranking amongst students</li>
+                                                <li><i class="fas fa-caret-right"></i> Topic Understanding</li>
+                                                <li><i class="fas fa-caret-right"></i> Ranking amongst students</li>
                                             </ul>
-                                            <br><br>
-                                            <p style="padding-left:10px; text-align:justify;color: red;">Phase II School
-                                                Exam Oriented</p>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Course
-                                                Coverage </p>
-                                            <p style="padding-left:10px; text-align:justify">Class IX NCERT Book at the School Level.</p>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Course
-                                                Components
-                                                Lectures</p>
-                                            <p style="padding-left:10px; text-align:justify">The Lectures by competent &
-                                                experienced faculty ensure that the students clear
-                                                the concepts at NCERT Level </p>
-                                            <p style="padding-left:10px; text-align:justify;">Daily
-                                                Assignments </p>
-                                            <p style="padding-left:10px; text-align:justify">Lecture Supplements: The
-                                                “In Class
-                                                Examples” and “In Class To Dos” are Given as Lecture
-                                                Supplements.</p>
-                                            <p style="padding-left:10px; text-align:justify">Home Assignments: Along
-                                                with the
-                                                Lecture Supplements a set of curated problems
-                                                will be given to the student as the home assignment with each
-                                                lecture.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br><br>
+                            </div>
+                        </td>
+                    </tr>
 
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Course
-                                                Material</p>
-                                            <p style="padding-left:10px; text-align:justify">The students will get the study material, prepared by experts named ‘Conquer NCERT’.
-                                                The course material has attained the status of being the ‘perfect material’ for NCERT
-                                                based Board Exam preparation.
-                                                <br><br>
-                                                Modular Structure: The Course Material has a Modular Structure (4
-                                                booklets with
-                                                meaningfully grouped Topics)<br><br>
-                                                Theory: The most comprehensive notes for all the topics. All Proofs and
-                                                Derivations
-                                                are given separately. Lots of solved examples.<br>
-                                                <br>Problem Sets
-                                            </p>
+                    <tr id="school">
+                        <td colspan="2"><br/>
+                            <div id="mySemesterDropDownTwo">
+                                <table width="959px" cellpadding="5px">
+                                    <tr>
+                                        <td width="150px" style="vertical-align:top;">
+                                            <label class="btn btn-info btn-block"> Course Coverage </label>
+                                        </td>
+                                        <td style="padding-left:30px;"> JEE syllabus common to Class IX NCERT Book at the
+                                            School level.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="150px" style="vertical-align:top;">
+                                            <label class="btn btn-info btn-block"> Course Components Lectures</label>
+                                        </td>
+                                        <td style="padding-left:30px"> The Lectures by NCERT specialized faculty ensure that the students clear the
+                                            concepts at NCERT Level.
+                                            <br/> Daily Assignments <br/> Lecture
+                                            Supplements: The "In Class
+                                            Examples" and "In Class To Dos" are Given as Lecture
+                                            Supplements. <br/> Home Assignments: Along with the
+                                            Lecture Supplements a set of curated problems
+                                            will be given to the student as the home assignment with each lecture.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="150px" style="vertical-align:top;">
+                                            <label class="btn btn-info btn-block">Course Material </label>
+                                        </td>
+                                        <td style="padding-left:30px"> The students will get the study material, prepared by experts named ‘Conquer NCERT’.
+                                            The course material has attained the status of being the ‘perfect material’ for NCERT
+                                            based Board Exam preparation.
+                                            <br> The Course Material has:<br>
+                                            Modular Structure: The Course Material has a Modular Structure (4 booklets
+                                            with
+                                            meaningfully grouped Topics)<br>
+                                            Theory: The most comprehensive notes for all the topics. All Proofs and
+                                            Derivations
+                                            are given separately. Lots of solved examples.<br>
+                                            <br>Problem Sets
                                             <ul>
-                                                <li><i class="fas fa-angle-right"></i> Exercise I — NCERT Exercise</li>
-                                                <li><i class="fas fa-angle-right"></i> Exercise II — Board/School Exam Oriented</li>
-                                                <li><i class="fas fa-angle-right"></i> Flashback I — Topic wise segregation of last 10 years CBSE Exam
+                                                <li><i class="fas fa-caret-right"></i> Exercise I — NCERT Exercise</li>
+                                                <li><i class="fas fa-caret-right"></i> Exercise II — Board/School Exam Oriented</li>
+                                                <li><i class="fas fa-caret-right"></i> Flashback I — Topic wise segregation of last 10 years CBSE Exam
                                                     Problems.
                                                 </li>
                                             </ul>
-                                            <p style="padding-left:10px; text-align:justify;"><span style="color: #58A9A9;">Tests</span><br>Tests
-                                                are conducted
-                                                periodically on</p>
-                                            <ul>
-                                                <li>Individual Topics</li>
-                                                <li>Group of Topics</li>
-                                                <li>Relative Ranking amongst students</li>
-                                            </ul>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">The Test help
-                                                to gauge</p>
-                                            <ul>
-                                                <li>Topic Understanding</li>
-                                                <li>Ranking amongst students</li>
-                                            </ul>
-                                            <br><br><br>
-                                            <p style="padding-left:10px; text-align:justify;color: red;">Phase II AIPMT
-                                                ORIENTED <br>
-                                            </p>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Course
-                                                Coverage</p>
-                                            <p style="padding-left:10px; text-align:justify">AIPMT Syllabus common to
-                                                Class IX
-                                                NCERT Book at the AIPMT Level.</p>
-                                            <p style="padding-left:10px; text-align:justify">Course Components</p>
-                                            <p style="padding-left:10px; text-align:justify">Same as Semester I</p>
-                                            <p style="padding-left:10px; text-align:justify;"><span style="color: #58A9A9;">Batch Dates</span>
-                                                <br>Batch Commencement<br>
-                                                08/04/2018<br>
-                                                14/05/2018
-                                            </p>
-                                            <p style="padding-left:10px; text-align:justify;color: #58A9A9;">Fees
-                                                Structure</p>
-                                            <p style="padding-left:10px; text-align:justify">Class IX</p>
-                                            <p style="padding-left:10px; text-align:justify">Phase I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                25000</p>
-                                            <p style="padding-left:10px; text-align:justify">Phase II &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCERT
-                                                Level 10000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AIPMT
-                                                Level 20000</p>
-                                            <p style="padding-left:10px; text-align:justify;color: red;">Inclusive of
-                                                GST 18%</p>
-                                            <p style="padding-left:10px; text-align:justify;color: red;">The student
-                                                will get First 3 lecture of each subject as demo.</p>
-                                            <p style="padding-left:10px; text-align:justify;color: red;">The student has
-                                                to register for the continuation of class.</p>
-                                            <p style="padding-left:10px; text-align:justify;color: red;">Terms &
-                                                Conditions:</p>
-
-                                            <ul>
-                                                <li>The students enrolling for Live JEE must ensure that they possess
-                                                    all the minimum
-                                                    requirements of PC and internet connection for successful conduction
-                                                    of Classes.
-                                                </li>
-                                                <li>If there occurs any technical snag / error from the student's end,
-                                                    he/she is unable to attend the
-                                                    lecture, the institute will not be responsible and in this case
-                                                    student can only view the recorded
-                                                    lecture.
-                                                </li>
-                                                <li>The student must opt for timing most suitable to them from the
-                                                    teacher time table because if
-                                                    the student fails to attend the same, the session will still be
-                                                    conducted and any request for
-                                                    rescheduling will not be entertained.
-                                                </li>
-                                            </ul>
-                                            <p style="padding-left:10px; text-align:justify;color: red;">Refund
-                                                Policy:</p>
-                                            <p style="padding-left:10px; text-align:justify">Period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deduction</p>
-                                            <p style="padding-left:10px; text-align:justify">After 7 Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                Rs 1000/- per lecture</p>
-
                                         </td>
                                     </tr>
-                                    </tbody>
+                                    <tr>
+                                        <td width="150px" style="vertical-align:top;">
+                                            <label class="btn btn-info btn-block"> Tests </label>
+                                        </td>
+                                        <td style="padding-left:30px"> Tests are conducted periodically on <br/>
+                                            periodically on</p>
+                                            <ul>
+                                                <li><i class="fas fa-caret-right"></i> Individual Topics</li>
+                                                <li><i class="fas fa-caret-right"></i> Group of Topics</li>
+                                                <li><i class="fas fa-caret-right"></i> Relative Ranking amongst students</li>
+                                            </ul>
+                                            <p style="padding-left:10px; text-align:justify;color:black;margin-bottom: 0">
+                                                The Test help
+                                                to gauge</p>
+                                            <ul>
+                                                <li><i class="fas fa-caret-right"></i> Topic Understanding</li>
+                                                <li><i class="fas fa-caret-right"></i> Ranking amongst students</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
                                 </table>
                             </div>
-                        </div>
-                    </div>
+                        </td>
+                    </tr>
 
-                    <div id="footer2">
-                        <div class="innerFooter">
-                            <ul class="innerFooterList">
-                                <li class="firstList"><a href="#">About Us</a></li>
-                                <li class="secondList"><a href="#">Franchise</a></li>
-                                <li class="thirdList"><a href="#">Join Us</a></li>
-                                <li class="fourthList"><a href="#">Privacy Policy</a></li>
-                                <li class="fifthList"><a href="#">Contact Us</a></li>
-                                <li class="sixthList"><a href="#">Disclaimer</a></li>
-                                <li class="seventhList"><a href="#">FAQ</a></li>
-                            </ul>
-                            <div class="lastInnerFooter">
-                                <ul class="companyProfile">
-                                    <li class="profile">
-                                        <button type="button" class="btn btn-medium btn-primary btn-rounded"
-                                                style="border:1px solid #666666">View Company Profile
-                                        </button>
-                                    </li>
-                                    <li class="address">domain E - 472 - A Talwandi, Kota, Rajasthan - 324005</li>
-                                    <li class="fb-like"
-                                        data-href="https://www.facebook.com/Domain-Edutech-Pvt-Ltd-1755525578009627/"
-                                        data-layout="standard" data-action="like" data-show-faces="false"
-                                        data-share="true">Like Share
-                                    </li>
-                                </ul>
-                            </div>
-                            <h1 class="rights">&copy;&nbsp;2018 All Rights Reserved with domain Edutech Pvt. Ltd.</h1>
-                        </div>
-                    </div>
+
+                    <tr>
+                        <td width="350px"><label class="btn btn-info btn-block"
+                                                 style="background-color: rgb(91, 183, 91);"> Phase II AIPMT Oriented <i
+                                class="fa fa-chevron-down" aria-hidden="true"></i> </label></td>
+                        <td width="380px" style="padding-left:30px"> &nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><br/>
+                            <table width="959px" cellpadding="5px">
+
+                                <tr>
+                                    <td width="150px" style="vertical-align:top;"><label class="btn btn-info btn-block">Batch
+                                        Dates</label></td>
+                                    <td style="padding-left:30px"> Batch Commencement<br>
+                                        <label class="btn btn-info " width="200px"> 08/04/2018 </label>
+                                        <label class="btn btn-info " width="200px"> 14/05/2018 </label></td>
+                                </tr>
+                                <tr>
+                                    <td width="150px" style="vertical-align:top;"><label class="btn btn-info btn-block">Fees
+                                        Structure</label></td>
+                                    <td style="padding-left:30px"> Class X<br>
+                                        <p style="padding-left:10px; text-align:justify"><label class="btn btn-info "
+                                                                                                width="200px">Phase
+                                            I</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label class="btn btn-info " width="200px"> <span style="color: #fff">&#8377;</span> 25000</label></p>
+                                        <p style="padding-left:10px; text-align:justify"><label class="btn btn-info "
+                                                                                                width="200px">Phase
+                                            II</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
+                                                class="btn btn-info " width="200px">NCERT
+                                            Level&nbsp;&nbsp;&nbsp;
+                                            <span style="color: #fff">&#8377;</span> 10000</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
+                                                class="btn btn-info " width="200px">JEE Level&nbsp;&nbsp;&nbsp;
+                                            <span style="color: #FFFFFF">&#8377;</span> 20000</label></p>
+                                        <p style="padding-left:10px; text-align:justify;color:#dc341e;margin-bottom:0">
+                                            Inclusive of GST
+                                            18%</p>
+                                        <p style="padding-left:30px; text-align:justify;margin-bottom: 0"><i class="fas fa-caret-right"></i> The student
+                                            will
+                                            get First 3 lecture of each subject as demo.</p>
+                                        <p style="padding-left:30px; text-align:justify;"><i class="fas fa-caret-right"></i> The student has to
+                                            register for the continuation of class.</p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td width="150px" style="vertical-align:top;"><label class="btn btn-info btn-block">Terms
+                                        & Conditions</label></td>
+                                    <td>
+                                        <ul>
+                                            <li style="margin-bottom: 8px;padding-left: 10px">The students enrolling for Live NEET  must ensure that they possess all
+                                                the minimum
+                                                requirements of PC and internet connection for successful conduction of
+                                                Classes.
+                                            </li>
+                                            <li style="margin-bottom: 8px;padding-left: 10px">If there occurs any technical snag / error from the student's end,
+                                                he/she is unable to attend the
+                                                lecture, the institute will not be responsible and in this case student
+                                                can only view the recorded
+                                                lecture.
+                                            </li>
+                                            <li style="margin-bottom: 10px;padding-left: 10px">The student must opt for timing most suitable to them from the teacher
+                                                time table because if
+                                                the student fails to attend the same, the session will still be
+                                                conducted and any request for
+                                                rescheduling will not be entertained.
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="150px" style="vertical-align:top;"><label class="btn btn-info btn-block">Refund Policy</label></td>
+                                    <td>
+                                        <p style="padding-left:30px; text-align:justify">Period&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deduction</p>
+                                        <p style="padding-left:30px; text-align:justify;margin-bottom: 5px">After 7 Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &#8377; 1000/- per lecture</p>
+                                        <p style="padding-left:30px; text-align:justify;margin-bottom: 30px;color: red">The Deduction is over and above the Course Material Fee (if already dispatched),
+                                            and Taxes as applicable.</p>
+
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+<div id="footer2" style="padding:0px;">
+    <div class="innerFooter">
+        <ul class="innerFooterList">
+            <li class="firstList"><a href="about_us.php">About Us</a></li>
+            <li class="secondList"><a href="franchise.php">Franchise</a></li>
+            <li class="thirdList"><a href="join_us.php">Join Us</a></li>
+            <li class="fourthList"><a href="privacy_policy.php">Privacy Policy</a></li>
+            <li class="fifthList"><a href="contact_us.php">Contact Us</a></li>
+            <li class="sXthList"><a href="disclaimer.php">Disclaimer</a></li>
+            <li class="seventhList"><a href="faq.php">FAQ</a></li>
+        </ul>
+        <div class="lastInnerFooter">
+            <ul class="companyProfile">
+                <li class="profile"><a href="company_profile.php">
+                    <button type="button" class="btn btn-medium btn-primary btn-rounded"
+                            style="border:1px solid #666666">View Company Profile
+                    </button>
+                </a></li>
+                <li class="address">domain E - 472 - A Talwandi, Kota, Rajasthan - 324005</li>
+                <!--  <li class="fb-like"
+                      data-href="https://www.facebook.com/Domain-Edutech-Pvt-Ltd-1755525578009627/"
+                      data-layout="standard" data-action="like" data-show-faces="false"
+                      data-share="true">Like Share</li> -->
+            </ul>
+        </div>
+        <h1 class="rights">&copy;&nbsp;2018 All Rights Reserved with domain Edutech Pvt. Ltd.</h1>
     </div>
 </div>
+</div>
+</div>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>
 
 <script language="javascript">
+    function change_div(p) {
+        if (p == 'jee') {
+            $('#school').hide();
+            $('#school_td').css("background-color", "#ccc");
+            $('#jee').show();
+            $('#jee_td').css("background-color", "#5bb75b");
+        }
+        else {
+            $('#jee').hide();
+            $('#jee_td').css("background-color", "#ccc");
+            $('#school').show();
+            $('#school_td').css("background-color", "#5bb75b");
+        }
+    }
+
+    change_div('jee');
+
     function call_me() {
         $('#call_me_request').click();
     }
@@ -551,48 +716,4 @@
         $('#invalid').html('Invalid Username & Password. Please try again.');
     });
 
-    function schedule_demo() {
-        var name = $('#name').val();
-        var phone = $('#phone').val();
-        var data = "submit=yes&name=" + name + "&phone=" + phone;
-        $.ajax({
-            type: "POST",
-            data: data,
-            url: "schedule_demo12.php",
-            success: function (e) {
-                if (e == "All Fields are required") {
-                    alert(e);
-                }
-                else if (e == "Error In the System Please try it later") {
-                    alert(e);
-                }
-                else {
-                    alert('Thank you for scheduling a demo with Livejee.com. Our representative will contact you soon.');
-                }
-            }
-        });
-    }
-
-    $('#schedule_demo12').click(function () {
-        var name = $('#name').val();
-        var phone = $('#phone').val();
-        var data = "submit=yes&name=" + name + "&phone=" + phone;
-        $.ajax({
-            type: "POST",
-            data: data,
-            url: "schedule_demo.php",
-            success: function (e) {
-                if (e == "All Fields are required") {
-                    alert(e);
-                }
-                else if (e == "Error In the System Please try it later") {
-                    alert(e);
-                }
-                else {
-                    $('#schedule_detail').attr('href', 'schedule_detail.php?id=' + e);
-                    $('#schedule_detail').trigger('click');
-                }
-            }
-        });
-    });
 </script>
