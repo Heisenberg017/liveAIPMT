@@ -207,14 +207,6 @@ body {
     margin-bottom: 20px;
 }
 
-.know-more:hover {
-    padding: 5px 5px 8px 5px;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    height: 40px;
-    border-radius: 5px;
-}
 
 #lastWrapper {
     background-color: #38CFD1;
@@ -1012,4 +1004,5 @@ tbody {
     .footer-main-list li {
         margin: 10px 10px 10px 10px;
     }
+
 }
