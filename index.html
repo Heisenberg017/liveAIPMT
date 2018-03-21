@@ -9,6 +9,124 @@
     <title>Live NEET Coaching Classes | NEET Online Coaching Classes | domain E | India</title>
     <meta name="description"
           content="The most dependable NEET tuitions for 9th, 10th, 11th, and 12th for Physics Chemistry and Biology. The tuitions are live & Interactive, being conducted online, for group of students."/>
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            z-index: 999;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+
+        }
+
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .dropdown1 {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown1 .dropbtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 991;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav a:hover, .dropdown1:hover .dropbtn {
+            background-color: #555;
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown1:hover .dropdown-content {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child), .dropdown1 .dropbtn {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .topnav.responsive .dropdown1 {
+                float: none;
+            }
+
+            .topnav.responsive .dropdown-content {
+                position: relative;
+            }
+
+            .topnav.responsive .dropdown1 .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    </style>
 </head>
 <body>
 <div id="fullWrapper">
@@ -17,6 +135,25 @@
             <div class="navBar-logo">
                 <img src="img/neetLogo.png" alt="JEE" class="navBar-logo-image">
             </div>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="index.php">Home</a>
+            <div class="dropdown1">
+                <button class="dropbtn">Courses
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="ix_detail.php">Class IX Foundation</a>
+                    <a href="x_detail.php">Class X Foundation</a>
+                    <a href="xi_detail.php">JEE Class XI</a>
+                    <a href="xii_detail.php">JEE Class XII</a>
+                    <a href="xii_repeater_detail.php">JEE Repeater</a>
+                </div>
+            </div>
+            <a href="about_us.php">About Us</a>
+            <a href="contact_us.php">Contact Us</a>
+            <a href="faq.php">FAQ's</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </div>
     </div>
     <div class="container">
@@ -298,5 +435,15 @@
     </div>
 </div>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
 </body>
 </html>
